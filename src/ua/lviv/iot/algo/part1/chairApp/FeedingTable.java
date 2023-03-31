@@ -7,9 +7,9 @@ import lombok.*;
 @ToString
 public class FeedingTable extends Chair{
 
-    public int minHeightCm;
-    public int maxHeightCm;
-    public int currentHeightCm;
+    public int minHeightInCm;
+    public int maxHeightInCm;
+    public int currentHeightInCm;
     int childAge;
 
     public FeedingTable(int id, String owner, String material, int maxWeight, int maxHeightInCm,
@@ -18,26 +18,26 @@ public class FeedingTable extends Chair{
         this.owner = owner;
         this.material = material;
         this.maxWeight = maxWeight;
-        this.maxHeightCm = maxHeightInCm;
-        this.minHeightCm = minHeightInCm;
-        this.currentHeightCm = currentHeightInCm;
+        this.maxHeightInCm = maxHeightInCm;
+        this.minHeightInCm = minHeightInCm;
+        this.currentHeightInCm = currentHeightInCm;
         this.childAge = childAge;
     }
 
     public void adjustPosition(int value){
-        if (value > maxHeightCm || value < minHeightCm){
+        if (value > maxHeightInCm || value < minHeightInCm){
             System.out.println("The value does not correspond to the characteristics of the chair");
         } else {
-        currentHeightCm = value;
+        currentHeightInCm = value;
         }
     }
 
     @Override
     public String toString() {
         return "Chair id: " +id +", material: " +material +", max weight: "
-                +maxWeight +", owner: " +owner +", max height: " + maxHeightCm +", min height: "
-                + minHeightCm +", current height: "
-                + currentHeightCm +", child age: " +childAge;
+                +maxWeight +", owner: " +owner +", max height: " + maxHeightInCm +", min height: "
+                + minHeightInCm +", current height: "
+                + currentHeightInCm +", child age: " +childAge;
     }
 
 }

@@ -1,5 +1,12 @@
 package ua.lviv.iot.algo.part1.chairApp;
 
+import lombok.*;
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+
 public class SwingChair extends Chair {
 
     public boolean hasCanopy;
