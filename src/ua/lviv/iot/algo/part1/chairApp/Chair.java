@@ -5,13 +5,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Chair {
+public abstract class Chair {
 
-    private String material;
-    private int maxWeight;
-    private int id = 1;
-    private String owner;
-    private static Chair instance = new Chair();
+    public String material;
+    public int maxWeight;
+    public int id = 1;
+    public String owner;
 
     public void occupy(String owner) {
         if(this.owner == null) {
@@ -29,25 +28,12 @@ public class Chair {
         return this.owner != null;
     }
 
-    public static Chair getInstance() {
-        return instance;
-    }
-
     @Override
     public String toString() {
         return "Chair id: " +id +", material: " +material +", max weight: "
                 +maxWeight +", owner: " +owner;
     }
 
-    public static void main(String[] args) {
+    public void adjustPosition(int value){}
 
-        Chair[] chairs = {
-        Chair.getInstance(),
-        new Chair(),
-        new Chair("Birch", 95, 30, "Maksym"),
-        Chair.getInstance()};
-
-        for (Chair info: chairs) System.out.println(info);
-
-    }
 }
