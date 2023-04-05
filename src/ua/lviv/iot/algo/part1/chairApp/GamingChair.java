@@ -5,23 +5,19 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-
+@ToString(callSuper = true)
 public class GamingChair extends Chair{
 
-    public boolean hasCoolingSystem;
-    public boolean hasIlluminatedLogo;
-    public int maxHeightOfArmrestsInCm;
-    public int minHeightOfArmrestsInCm;
-    public int currentHeightOfArmrestsInCm;
+    private boolean hasCoolingSystem;
+    private boolean hasIlluminatedLogo;
+    private int maxHeightOfArmrestsInCm;
+    private int minHeightOfArmrestsInCm;
+    private int currentHeightOfArmrestsInCm;
 
     public GamingChair(int id, String owner, String material, int maxWeight,
                        boolean hasCoolingSystem, boolean hasIlluminatedLogo, int maxHeightOfArmrestsInCm,
                        int minHeightOfArmrestsInCm, int currentHeightOfArmrestsInCm) {
-        this.id = id;
-        this.owner = owner;
-        this.material = material;
-        this.maxWeight = maxWeight;
+        super(material, maxWeight, id, owner);
         this.hasCoolingSystem = hasCoolingSystem;
         this.hasIlluminatedLogo = hasIlluminatedLogo;
         this.maxHeightOfArmrestsInCm = maxHeightOfArmrestsInCm;
@@ -37,13 +33,4 @@ public class GamingChair extends Chair{
             currentHeightOfArmrestsInCm = value;
         }
     }
-
-    @Override
-    public String toString() {
-        return "Chair id: " +id +", material: " +material +", max weight: "
-                +maxWeight +", owner: " +owner +", has cooling systems: " +hasCoolingSystem +", has illuminated logo: " +hasIlluminatedLogo
-                +", max height of armrests: " + maxHeightOfArmrestsInCm +", min height of armrests: " + minHeightOfArmrestsInCm +", current height of armrests: "
-                + currentHeightOfArmrestsInCm;
-    }
-
 }

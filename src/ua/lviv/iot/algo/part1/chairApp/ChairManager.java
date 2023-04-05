@@ -22,24 +22,23 @@ public class ChairManager {
         List<Chair> chairs = new ArrayList<>();
 
         ChairManager chairManager = new ChairManager();
-        chairManager.addChair(new OfficeChair(5, "Joe", "Plastic", 110,"Conference Chair", 15));
+        chairManager.addChair(new OfficeChair(5, "Joe", "Plastic", 110,
+                "Conference Chair", 15));
         chairManager.addChair(new FeedingTable(22, "Eugene", "Plastic", 25,
                 120, 80, 80, 2));
-        chairManager.addChair(new GamingChair(6, "Boris", "carbon", 150, true, false,
-                40, 10, 15));
-        chairManager.addChair(new SwingChair(15,"Josh", "Oak", 170, false, 30, 0, 5));
+        chairManager.addChair(new GamingChair(6, "Boris", "carbon", 150, true,
+                false, 40, 10, 15));
+        chairManager.addChair(new SwingChair(15,"Josh", "Oak", 170, false,
+                30, 0, 5));
 
-        for (Chair info: chairs) System.out.println(info);
+        for (Chair info: chairs)
+            System.out.println(info);
 
-        var foundChairsByMaterial = chairManager.findAllMadeWithMaterial("Plastic");
-        for(Chair chair: foundChairsByMaterial){
+        for(Chair chair: chairManager.findAllMadeWithMaterial("Plastic")){
             System.out.println(chair);
         }
 
-        System.out.println("\t");
-
-        var foundChairsByMaxWeight = chairManager.findAllMadeWithMaxWeightGreaterThan(100);
-        for(Chair chair: foundChairsByMaxWeight){
+        for(Chair chair: chairManager.findAllMadeWithMaxWeightGreaterThan(100)){
             System.out.println(chair);
         }
     }

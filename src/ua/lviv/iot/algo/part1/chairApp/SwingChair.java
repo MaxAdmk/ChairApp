@@ -5,20 +5,16 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-
+@ToString(callSuper = true)
 public class SwingChair extends Chair {
 
-    public boolean hasCanopy;
-    public int maxMotionAngleInDegrees;
-    public int minMotionAngleInDegrees;
-    public int currentMotionAngleInDegrees;
+    private boolean hasCanopy;
+    private int maxMotionAngleInDegrees;
+    private int minMotionAngleInDegrees;
+    private int currentMotionAngleInDegrees;
 
     public SwingChair(int id, String owner, String material, int maxWeight, boolean hasCanopy, int maxMotionAngleInDegrees, int minMotionAngleInDegrees, int currentMotionAngleInDegrees) {
-        this.id = id;
-        this.owner = owner;
-        this.material = material;
-        this.maxWeight = maxWeight;
+        super(material, maxWeight, id, owner);
         this.hasCanopy = hasCanopy;
         this.maxMotionAngleInDegrees = maxMotionAngleInDegrees;
         this.minMotionAngleInDegrees = minMotionAngleInDegrees;
@@ -31,12 +27,5 @@ public class SwingChair extends Chair {
         } else {
             currentMotionAngleInDegrees = value;
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Chair id: " +id +", material: " +material +", max weight: "
-                +maxWeight +", owner: " +owner +", has canopy: " +hasCanopy +", max motion angle: " + maxMotionAngleInDegrees +", min motion angle: "
-                + minMotionAngleInDegrees +", current motion angle: " + currentMotionAngleInDegrees;
     }
 }

@@ -4,20 +4,17 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(callSuper = true)
 public class FeedingTable extends Chair{
 
-    public int minHeightInCm;
-    public int maxHeightInCm;
-    public int currentHeightInCm;
-    int childAge;
+    private int minHeightInCm;
+    private int maxHeightInCm;
+    private int currentHeightInCm;
+    private int childAge;
 
     public FeedingTable(int id, String owner, String material, int maxWeight, int maxHeightInCm,
                         int minHeightInCm, int currentHeightInCm, int childAge){
-        this.id = id;
-        this.owner = owner;
-        this.material = material;
-        this.maxWeight = maxWeight;
+        super(material, maxWeight, id, owner);
         this.maxHeightInCm = maxHeightInCm;
         this.minHeightInCm = minHeightInCm;
         this.currentHeightInCm = currentHeightInCm;
@@ -31,13 +28,4 @@ public class FeedingTable extends Chair{
         currentHeightInCm = value;
         }
     }
-
-    @Override
-    public String toString() {
-        return "Chair id: " +id +", material: " +material +", max weight: "
-                +maxWeight +", owner: " +owner +", max height: " + maxHeightInCm +", min height: "
-                + minHeightInCm +", current height: "
-                + currentHeightInCm +", child age: " +childAge;
-    }
-
 }

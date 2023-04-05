@@ -5,28 +5,19 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(callSuper = true)
 public class OfficeChair extends Chair{
 
-    public String type;
-    public int chairBackrestAngleInDegrees;
+    private String type;
+    private int chairBackrestAngleInDegrees;
 
     public OfficeChair(int id, String owner, String material, int maxWeight, String type, int chairBackrestAngleInDegrees) {
-        this.id = id;
-        this.owner = owner;
-        this.material = material;
-        this.maxWeight = maxWeight;
+        super(material, maxWeight, id, owner);
         this.type = type;
         this.chairBackrestAngleInDegrees = chairBackrestAngleInDegrees;
     }
 
     public void adjustPosition(int value) {
         chairBackrestAngleInDegrees = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Chair id: " +id +", material: " +material +", max weight: "
-                +maxWeight +", owner: " +owner +", type: " +type +", chair backrest angle: " +chairBackrestAngleInDegrees;
     }
 }

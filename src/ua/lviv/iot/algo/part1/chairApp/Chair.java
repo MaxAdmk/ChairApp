@@ -7,10 +7,10 @@ import lombok.*;
 @ToString
 public abstract class Chair {
 
-    public String material;
-    public int maxWeight;
-    public int id = 1;
-    public String owner;
+    private String material;
+    private int maxWeight;
+    private int id = 1;
+    private String owner;
 
     public void occupy(String owner) {
         if(this.owner == null) {
