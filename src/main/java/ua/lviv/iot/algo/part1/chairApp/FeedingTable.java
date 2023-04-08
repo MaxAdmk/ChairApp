@@ -24,6 +24,8 @@ public class FeedingTable extends Chair{
     public void adjustPosition(int value){
         if (value > maxHeightInCm || value < minHeightInCm){
             System.out.println("The value does not correspond to the characteristics of the chair");
+        } else if (maxHeightInCm == 0 && minHeightInCm == 0) {
+            System.out.println("You should change max height and min height");
         } else {
         currentHeightInCm = value;
         }
