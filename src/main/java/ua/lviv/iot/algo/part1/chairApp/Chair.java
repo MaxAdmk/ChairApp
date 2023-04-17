@@ -36,4 +36,12 @@ public abstract class Chair {
 
     public void adjustPosition(int value){}
 
+    public String getHeaders() {
+        return "material" + "," + "maxWeight" + "," + "id" + "," + "owner";
+    }
+
+    public String toCSV(){
+        return material + "," + maxWeight + "," + id + "," + owner;
+    }
+
 }

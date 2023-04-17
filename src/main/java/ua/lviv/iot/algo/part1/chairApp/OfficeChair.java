@@ -20,4 +20,13 @@ public class OfficeChair extends Chair{
     public void adjustPosition(int value) {
         chairBackrestAngleInDegrees = value;
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "type" + "," + "chairBackrestAngleInDegrees";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "," + type + "," + chairBackrestAngleInDegrees;
+    }
+
 }

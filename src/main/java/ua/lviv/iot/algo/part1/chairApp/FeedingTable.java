@@ -30,4 +30,14 @@ public class FeedingTable extends Chair{
         currentHeightInCm = value;
         }
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "minHeightInCm" + "," + "maxHeightInCm"
+                + "," + "currentHeightInCm" + "," + "childAge";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "," + maxHeightInCm + "," +maxHeightInCm + "," + currentHeightInCm + "," + childAge;
+    }
+
 }

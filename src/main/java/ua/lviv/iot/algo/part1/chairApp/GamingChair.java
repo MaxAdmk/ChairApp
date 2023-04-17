@@ -33,4 +33,17 @@ public class GamingChair extends Chair{
             currentHeightOfArmrestsInCm = value;
         }
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," +"hasCoolingSystem" + "," + "hasIlluminatedLogo"
+                + "," + "maxHeightOfArmrestsInCm" + "," + "minHeightOfArmrestsInCm"
+                + "," + "currentHeightOfArmrestsInCm";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "," + hasCoolingSystem + "," + hasIlluminatedLogo + ","
+                + maxHeightOfArmrestsInCm + "," + minHeightOfArmrestsInCm + ","
+                + currentHeightOfArmrestsInCm;
+    }
+
 }

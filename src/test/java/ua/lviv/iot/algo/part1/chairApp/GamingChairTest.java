@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class GamingChairTest {
 
     @Test
-    void adjustPositionToThirtyFiveShouldReturnZero() {
+    void testAdjustPositionToThirtyFiveShouldReturnZero() {
         var gamingChair = new GamingChair();
         gamingChair.adjustPosition(35);
         assertEquals(0, gamingChair.getCurrentHeightOfArmrestsInCm());
     }
 
     @Test
-    void adjustPositionToTwentyShouldReturnTwenty() {
+    void testAdjustPositionToTwentyShouldReturnTwenty() {
         var gamingChair = new GamingChair();
         gamingChair.setMinHeightOfArmrestsInCm(10);
         gamingChair.setMaxHeightOfArmrestsInCm(40);

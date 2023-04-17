@@ -30,4 +30,15 @@ public class SwingChair extends Chair {
             currentMotionAngleInDegrees = value;
         }
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "hasCanopy" + "," + "maxMotionAngleInDegrees"
+                + "," + "minMotionAngleInDegrees" + "," + "currentMotionAngleInDegrees";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "," + hasCanopy + "," + maxMotionAngleInDegrees + ","
+                + minMotionAngleInDegrees + "," + currentMotionAngleInDegrees;
+    }
+
 }
