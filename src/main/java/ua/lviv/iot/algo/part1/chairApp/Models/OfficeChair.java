@@ -1,12 +1,14 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Models;
 
 import lombok.*;
+import ua.lviv.iot.algo.part1.chairApp.Models.Chair;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class OfficeChair extends Chair{
+public class OfficeChair extends Chair {
 
     private String type;
     private int chairBackrestAngleInDegrees;
@@ -20,4 +22,13 @@ public class OfficeChair extends Chair{
     public void adjustPosition(int value) {
         chairBackrestAngleInDegrees = value;
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + "," + "type" + "," + "chairBackrestAngleInDegrees";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "," + type + "," + chairBackrestAngleInDegrees;
+    }
+
 }

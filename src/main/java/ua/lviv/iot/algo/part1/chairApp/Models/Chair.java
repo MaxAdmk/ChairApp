@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Models;
 import lombok.*;
 @Setter
 @Getter
@@ -35,5 +35,13 @@ public abstract class Chair {
     }
 
     public void adjustPosition(int value){}
+
+    public String getHeaders() {
+        return "material" + "," + "maxWeight" + "," + "id" + "," + "owner";
+    }
+
+    public String toCSV(){
+        return material + "," + maxWeight + "," + id + "," + owner;
+    }
 
 }

@@ -1,9 +1,11 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Manager;
+import ua.lviv.iot.algo.part1.chairApp.Models.Chair;
+
 import java.util.List;
 import java.util.ArrayList;
 public class ChairManager {
 
-    List<Chair> chairs = new ArrayList<>();
+    public List<Chair> chairs = new ArrayList<>();
 
     public void addChair(final Chair chair){
         this.chairs.add(chair);
@@ -16,6 +18,4 @@ public class ChairManager {
     public List<Chair> findAllMadeWithMaxWeightGreaterThan(int maxWeight){
         return chairs.stream().filter(chair -> chair.getMaxWeight() > maxWeight ).toList();
     }
-
-
 }

@@ -1,0 +1,4 @@
+material,maxWeight,id,owner,hasCoolingSystem,hasIlluminatedLogo,maxHeightOfArmrestsInCm,minHeightOfArmrestsInCm,currentHeightOfArmrestsInCm
+wood,120,12,Joseph,false,true,40,20,30
+material,maxWeight,id,owner,type,chairBackrestAngleInDegrees
+wood,120,32,Max,talking,15
