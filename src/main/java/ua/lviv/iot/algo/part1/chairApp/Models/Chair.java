@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Models;
 import lombok.*;
 @Setter
 @Getter

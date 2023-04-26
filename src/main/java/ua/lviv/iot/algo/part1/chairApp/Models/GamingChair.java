@@ -1,12 +1,14 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Models;
 
 import lombok.*;
+import ua.lviv.iot.algo.part1.chairApp.Models.Chair;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class GamingChair extends Chair{
+public class GamingChair extends Chair {
 
     private boolean hasCoolingSystem;
     private boolean hasIlluminatedLogo;

@@ -1,6 +1,8 @@
 package ua.lviv.iot.algo.part1.chairApp;
 
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.chairApp.Models.SwingChair;
+
 import static org.junit.jupiter.api.Assertions.*;
 class SwingChairTest {
 

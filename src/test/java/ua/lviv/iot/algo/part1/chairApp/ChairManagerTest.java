@@ -1,6 +1,9 @@
 package ua.lviv.iot.algo.part1.chairApp;
 
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.chairApp.Manager.ChairManager;
+import ua.lviv.iot.algo.part1.chairApp.Models.*;
+
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 class ChairManagerTest {

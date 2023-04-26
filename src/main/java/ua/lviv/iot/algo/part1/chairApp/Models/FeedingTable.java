@@ -1,11 +1,13 @@
-package ua.lviv.iot.algo.part1.chairApp;
+package ua.lviv.iot.algo.part1.chairApp.Models;
 import lombok.*;
+import ua.lviv.iot.algo.part1.chairApp.Models.Chair;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class FeedingTable extends Chair{
+public class FeedingTable extends Chair {
 
     private int minHeightInCm;
     private int maxHeightInCm;
